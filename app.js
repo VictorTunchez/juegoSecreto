@@ -7,7 +7,7 @@ console.log(numeroSecreto);
 function verificarIntento() {
     let numeroDeUsuario = parseInt(document.getElementById('valorUsuario').value);
         if (numeroDeUsuario === numeroSecreto) {
-            asignarTextoElemento('p',`Has acertado el numero secreto en ${intentos} ${intentos == 1 ? "intento" : "intentos"}`);
+            asignarTextoElemento('p',`Acertaste el numero secreto en ${intentos} ${intentos == 1 ? "intento" : "intentos"}`);
             document.getElementById('reiniciar').removeAttribute('disabled');
          }else{
              if(numeroDeUsuario>numeroSecreto){
@@ -54,7 +54,7 @@ function generarNumeroSecreto() {
     console.log(listaNumerosSorteados);
 
     if(listaNumerosSorteados.length == numeroMaximo){
-     asignarTextoElemento('p',`Yase sortearon todos los numeros posibles`);
+     asignarTextoElemento('p',`Ya se sortearon todos los numeros posibles`);
     }else if(listaNumerosSorteados.includes(numeroGenerado)){
      return generarNumeroSecreto();
     }else{
